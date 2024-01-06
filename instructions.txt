@@ -1,0 +1,19 @@
+Steps to run
+1. Extract the zipped file.
+2. Go to Project folder.
+3. Activate virtual environment using command:
+	venv\Scripts\activate
+4. Install requirements.txt
+	pip install -r requirements.txt
+5. AlphaHealth -> Backend Code
+6. AlphaHealth_Frontend -> Frontend code
+7. Go inside AlphaHealth and start the server using commands:
+	cd AlphaHealth
+	python manage.py makemigrations
+	python manage.py migrate
+	python manage.py runserver
+8. In a new terminal, go inside AlphaHealth_Frontend\ams-portal and start the react app.
+	cd AlphaHealth_Frontend\ams-portal
+	npm start
+
+Note - In case npm modules are erroring out, run npm install before npm run.
