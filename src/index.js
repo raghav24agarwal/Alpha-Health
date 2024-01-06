@@ -4,11 +4,20 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { BrowserRouter } from 'react-router-dom'
+import { Provider } from 'react-redux'
+import store from './store/index'
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  // To stop useEffect from being called twice, turning the React.StrictMode off.
+  // <React.StrictMode>
+    <BrowserRouter>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </BrowserRouter>
+  // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
